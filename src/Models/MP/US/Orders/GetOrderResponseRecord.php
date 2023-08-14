@@ -40,17 +40,17 @@ class GetOrderResponseRecord extends BaseModel
     public const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static string $openAPIModelName = 'GetOrderResponseRecord';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static array $openAPITypes = [
         'purchaseOrderId' => 'string',
         'customerOrderId' => 'string',
@@ -62,7 +62,7 @@ class GetOrderResponseRecord extends BaseModel
         'mart' => 'string',
         'isGuest' => 'bool',
         'shippingInfo' => '\Walmart\Models\MP\US\Orders\ShippingInfoType',
-        'orderLines' => '\Walmart\Models\MP\US\Orders\RefundLinesType',
+        'orderLines' => '\Walmart\Models\MP\US\Orders\OrderLinesType',
         'paymentTypes' => 'string[]',
         'orderSummary' => '\Walmart\Models\MP\US\Orders\OrderSummary',
         'pickupPersons' => '\Walmart\Models\MP\US\Orders\PickupPerson[]',
@@ -70,12 +70,12 @@ class GetOrderResponseRecord extends BaseModel
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      * @phpstan-var array<string, string|null>
-      * @psalm-var array<string, string|null>
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     * @phpstan-var array<string, string|null>
+     * @psalm-var array<string, string|null>
+     */
     protected static array $openAPIFormats = [
         'purchaseOrderId' => null,
         'customerOrderId' => null,
@@ -95,10 +95,10 @@ class GetOrderResponseRecord extends BaseModel
     ];
 
     /**
-      * Array of nullable properties. Used for (de)serialization
-      *
-      * @var boolean[]
-      */
+     * Array of nullable properties. Used for (de)serialization
+     *
+     * @var boolean[]
+     */
     protected static array $openAPINullables = [
         'purchaseOrderId' => false,
         'customerOrderId' => false,
@@ -247,7 +247,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets purchaseOrderId
      *
      * @return string
-    
+
      */
     public function getPurchaseOrderId()
     {
@@ -260,7 +260,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string $purchaseOrderId A unique ID associated with the seller's purchase order
      *
      * @return self
-    
+
      */
     public function setPurchaseOrderId($purchaseOrderId)
     {
@@ -276,7 +276,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets customerOrderId
      *
      * @return string
-    
+
      */
     public function getCustomerOrderId()
     {
@@ -289,7 +289,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string $customerOrderId A unique ID associated with the sales order for specified customer
      *
      * @return self
-    
+
      */
     public function setCustomerOrderId($customerOrderId)
     {
@@ -305,7 +305,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets customerEmailId
      *
      * @return string
-    
+
      */
     public function getCustomerEmailId()
     {
@@ -318,7 +318,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string $customerEmailId The email address of the customer for the sales order
      *
      * @return self
-    
+
      */
     public function setCustomerEmailId($customerEmailId)
     {
@@ -334,7 +334,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets orderType
      *
      * @return string|null
-    
+
      */
     public function getOrderType()
     {
@@ -347,7 +347,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string|null $orderType Specifies if the order is a regular order or replacement order. Possible values are REGULAR or REPLACEMENT. Provided in response only if query parameter replacementInfo=true.
      *
      * @return self
-    
+
      */
     public function setOrderType($orderType)
     {
@@ -363,7 +363,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets originalCustomerOrderID
      *
      * @return string|null
-    
+
      */
     public function getOriginalCustomerOrderID()
     {
@@ -376,7 +376,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string|null $originalCustomerOrderID customer order ID of the original customer order on which the replacement is created.
      *
      * @return self
-    
+
      */
     public function setOriginalCustomerOrderID($originalCustomerOrderID)
     {
@@ -392,7 +392,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets orderDate
      *
      * @return int
-    
+
      */
     public function getOrderDate()
     {
@@ -405,7 +405,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param int $orderDate The date the customer submitted the sales order
      *
      * @return self
-    
+
      */
     public function setOrderDate($orderDate)
     {
@@ -421,7 +421,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets buyerId
      *
      * @return string|null
-    
+
      */
     public function getBuyerId()
     {
@@ -434,7 +434,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string|null $buyerId Unique ID associated with the specified buyer
      *
      * @return self
-    
+
      */
     public function setBuyerId($buyerId)
     {
@@ -450,7 +450,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets mart
      *
      * @return string|null
-    
+
      */
     public function getMart()
     {
@@ -463,7 +463,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string|null $mart Mart information
      *
      * @return self
-    
+
      */
     public function setMart($mart)
     {
@@ -479,7 +479,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets isGuest
      *
      * @return bool|null
-    
+
      */
     public function getIsGuest()
     {
@@ -492,7 +492,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param bool|null $isGuest Indicates a guest customer
      *
      * @return self
-    
+
      */
     public function setIsGuest($isGuest)
     {
@@ -508,7 +508,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets shippingInfo
      *
      * @return \Walmart\Models\MP\US\Orders\ShippingInfoType
-    
+
      */
     public function getShippingInfo()
     {
@@ -521,7 +521,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param \Walmart\Models\MP\US\Orders\ShippingInfoType $shippingInfo shippingInfo
      *
      * @return self
-    
+
      */
     public function setShippingInfo($shippingInfo)
     {
@@ -536,8 +536,8 @@ class GetOrderResponseRecord extends BaseModel
     /**
      * Gets orderLines
      *
-     * @return \Walmart\Models\MP\US\Orders\RefundLinesType
-    
+     * @return \Walmart\Models\MP\US\Orders\OrderLinesType
+
      */
     public function getOrderLines()
     {
@@ -550,7 +550,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param \Walmart\Models\MP\US\Orders\RefundLinesType $orderLines orderLines
      *
      * @return self
-    
+
      */
     public function setOrderLines($orderLines)
     {
@@ -566,7 +566,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets paymentTypes
      *
      * @return string[]|null
-    
+
      */
     public function getPaymentTypes()
     {
@@ -579,7 +579,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param string[]|null $paymentTypes Payment Types
      *
      * @return self
-    
+
      */
     public function setPaymentTypes($paymentTypes)
     {
@@ -595,7 +595,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets orderSummary
      *
      * @return \Walmart\Models\MP\US\Orders\OrderSummary|null
-    
+
      */
     public function getOrderSummary()
     {
@@ -608,7 +608,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param \Walmart\Models\MP\US\Orders\OrderSummary|null $orderSummary orderSummary
      *
      * @return self
-    
+
      */
     public function setOrderSummary($orderSummary)
     {
@@ -624,7 +624,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets pickupPersons
      *
      * @return \Walmart\Models\MP\US\Orders\PickupPerson[]|null
-    
+
      */
     public function getPickupPersons()
     {
@@ -637,7 +637,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param \Walmart\Models\MP\US\Orders\PickupPerson[]|null $pickupPersons List of pickup persons
      *
      * @return self
-    
+
      */
     public function setPickupPersons($pickupPersons)
     {
@@ -653,7 +653,7 @@ class GetOrderResponseRecord extends BaseModel
      * Gets shipNode
      *
      * @return \Walmart\Models\MP\US\Orders\ShipNodesType|null
-    
+
      */
     public function getShipNode()
     {
@@ -666,7 +666,7 @@ class GetOrderResponseRecord extends BaseModel
      * @param \Walmart\Models\MP\US\Orders\ShipNodesType|null $shipNode shipNode
      *
      * @return self
-    
+
      */
     public function setShipNode($shipNode)
     {
