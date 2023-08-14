@@ -547,7 +547,7 @@ class GetOrderResponseRecord extends BaseModel
     /**
      * Sets orderLines
      *
-     * @param \Walmart\Models\MP\US\Orders\RefundLinesType $orderLines orderLines
+     * @param \Walmart\Models\MP\US\Orders\OrderLinesType $orderLines orderLines
      *
      * @return self
 
